@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Class/DSD LAB/project_1/project_1.sim/sim_1/impl/timing/xsim/exp_01_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exp_01
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Class/DSD LAB/project_1/project_1.srcs/sim_1/new/exp_01_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exp_01_test
