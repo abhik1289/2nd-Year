@@ -20,7 +20,7 @@ struct node *create()
     {
         p = (struct node *)malloc(sizeof(struct node));
         p->data = x;
-        p->left = dd();
+        p->left = create();
         p->right = create();
     }
     return p;
