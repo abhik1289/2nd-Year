@@ -20,7 +20,7 @@ struct node *create()
     {
         p = (struct node *)malloc(sizeof(struct node));
         p->data = x;
-        p->left = create();
+        p->left = dd();
         p->right = create();
     }
     return p;
@@ -31,7 +31,7 @@ void preOrder(struct node *root)
     if (root == NULL)
         return;
     printf("%d ", root->data);
-    preOrder(root->left);
+    preOrder(root->left);//
     preOrder(root->right);
 }
 
