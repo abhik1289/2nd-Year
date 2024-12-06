@@ -54,5 +54,5 @@ int main()
         printf("Element not found");
     else
         printf("Index of %d is %d", ele, index);
-    // return 0;
+    
 }
