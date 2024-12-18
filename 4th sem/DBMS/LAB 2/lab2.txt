@@ -1,0 +1,145 @@
+SQL> insert into emp (id,name,age,salary) values (1,Avik,18,100);
+insert into emp (id,name,age,salary) values (1,Avik,18,100)
+                                               *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into emp (id,name,age,salary) values (1,"Avik",18,100);
+insert into emp (id,name,age,salary) values (1,"Avik",18,100)
+                                               *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into emp values (1,"Avik",18,100);
+insert into emp values (1,"Avik",18,100)
+                          *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into emp values(1,"Avik",18,100);
+insert into emp values(1,"Avik",18,100)
+                         *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> clear
+SQL> clear screen
+
+SQL> desc emp
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(2)
+ NAME                                               VARCHAR2(10)
+ AGE                                                NUMBER(2)
+ SALARY                                             NUMBER(3)
+
+SQL> insert into emp values(1,'Avik',19,100);
+
+1 row created.
+
+SQL> insert into emp values(1,'Avik',19,400);
+
+1 row created.
+
+SQL> insert into emp values(1,'Avik Patra',19,900);
+
+1 row created.
+
+SQL> select * from emp
+  2  
+SQL> selcet name from emp where salary>200
+SP2-0734: unknown command beginning "selcet nam..." - rest of line ignored.
+SQL> selcet name id emp where salary<200
+SP2-0734: unknown command beginning "selcet nam..." - rest of line ignored.
+SQL> selcet name id emp where salary < 200;
+SP2-0734: unknown command beginning "selcet nam..." - rest of line ignored.
+SQL> clear screen
+
+SQL> insert into emp values (9,null,12,200);
+
+1 row created.
+
+SQL> desc emp
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(2)
+ NAME                                               VARCHAR2(10)
+ AGE                                                NUMBER(2)
+ SALARY                                             NUMBER(3)
+
+SQL> select * from emp
+  2  select * from emp;
+select * from emp
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select name from emp;
+
+NAME                                                                            
+----------                                                                      
+Avik                                                                            
+Avik                                                                            
+Avik Patra                                                                      
+                                                                                
+
+SQL> select salary from emp;
+
+    SALARY                                                                      
+----------                                                                      
+       100                                                                      
+       400                                                                      
+       900                                                                      
+       200                                                                      
+
+SQL> create emp2 (empno number(4),ename varchar(20),job varchar(10),mgr number(4),hiredate date,sal number(4),comm number(3),deptno number(2));
+create emp2 (empno number(4),ename varchar(20),job varchar(10),mgr number(4),hiredate date,sal number(4),comm number(3),deptno number(2))
+       *
+ERROR at line 1:
+ORA-00901: invalid CREATE command 
+
+
+SQL> create emp2 (empno number(4),ename varchar(20),job varchar(10),mgr number(4),hiredate date,sal number(4),comm number(3),deptno number(2));
+create emp2 (empno number(4),ename varchar(20),job varchar(10),mgr number(4),hiredate date,sal number(4),comm number(3),deptno number(2))
+       *
+ERROR at line 1:
+ORA-00901: invalid CREATE command 
+
+
+SQL> create table emp2 (empno number(4),ename varchar(20),job varchar(10),mgr number(4),hiredate date,sal number(4),comm number(3),deptno number(2));
+
+Table created.
+
+SQL> desc emp2
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(4)
+ ENAME                                              VARCHAR2(20)
+ JOB                                                VARCHAR2(10)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(4)
+ COMM                                               NUMBER(3)
+ DEPTNO                                             NUMBER(2)
+
+SQL> insert into values emp2 (7369,'SMITH','CLERK',7902,'17-dec-80',800,null,20);
+insert into values emp2 (7369,'SMITH','CLERK',7902,'17-dec-80',800,null,20)
+            *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> insert into emp2 values (7369,'SMITH','CLERK',7902,'17-dec-80',800,null,20);
+
+1 row created.
+
+SQL> insert into emp2 values (7499,'ALLEN','SALESMAN',7698,'20-FEB-81',1600,300,30);
+
+1 row created.
+
+SQL> SPOOL OFF

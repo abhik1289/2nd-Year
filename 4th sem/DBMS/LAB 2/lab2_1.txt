@@ -1,0 +1,59 @@
+SQL> insert into emp2 values (7521,'WARD','SALESMAN',7698,'22-FEB-81',1250,500,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7566,'JONES','MANAGER',7839,'02-APR-81',2975,NULL,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7654,'MARTIN','SALESMAN',7698,'28-SEP-81',1250,1400,30);
+insert into emp2 values (7654,'MARTIN','SALESMAN',7698,'28-SEP-81',1250,1400,30)
+                                                                        *
+ERROR at line 1:
+ORA-01438: value larger than specified precision allowed for this column 
+
+
+SQL> insert into emp2 values (7654,'MARTIN','SALESMAN',7698,'28-SEP-81',1250,400,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7698,'BLAKE','MANAGER',7639,'01-MAY-81',2850,NULL,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7782,'CLARK','MANAGER',7839,'09-JUN-81',2450,NULL,10);
+
+1 row created.
+
+SQL> insert into emp2 values (7788,'SCOTT','ANALYST',7566,'09-NOV-81',3000,NULL,20);
+
+1 row created.
+
+SQL> insert into emp2 values (7839,'KING','PRESIDENT',NULL,'17-NOV-81',5000,NULL,10);
+
+1 row created.
+
+SQL> insert into emp2 values (7844,'TURNER','SALESMAN',7698,'08-SEP-81',1500,0,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7876,'ADAMAS','CLERK',7788,'23-SEP-81',1100,NULL,20);
+
+1 row created.
+
+SQL> insert into emp2 values (7900,'JAMES','CLERK',7698,'03-DEC-81',950,NULL,30);
+
+1 row created.
+
+SQL> insert into emp2 values (7902,'FORD','ANALYST',7566,'03-DEC-81',3000,NULL,20);
+
+1 row created.
+
+SQL> insert into emp2 values (7934,'MILLER','CLERK',7782,'23-JAN-82',1300,NULL,10);
+
+1 row created.
+
+SQL> select name from emp2
+  2  
+SQL> select * name from emp2
+  2  

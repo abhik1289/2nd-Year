@@ -1,10 +1,8 @@
 
-
 public class Question3 {
 
     public static void main(String[] args) {
 
-      
         int number = 6;
         switch (number) {
             case 1:
@@ -28,6 +26,7 @@ public class Question3 {
             case 7:
                 System.out.println("Saturday");
                 break;
+
         }
 
     }

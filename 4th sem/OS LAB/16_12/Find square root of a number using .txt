@@ -1,0 +1,30 @@
+1)Find square root of a number using echo command
+ans:echo "scale=2; sqrt(25)" | bc
+2)Create a file name as fruits and store 5 fruits name in each line.
+ans:1) create a file fruits.txt (touch fruits.txt)
+2) nano fruits name in lines
+3)Display the lines which store 'Apple' from the fruits file.
+ans: grep -i "Apple" fruits.txt
+4)Display only the permission column from filelist.
+ans: ls -l | cut -b '1-5' fruits.txt
+5)Display only the group permissions of all the files of your current working directory.
+ans: ls
+6)Display the contents of fruits file with its line number
+ans: nl fruits.txt
+7)Display lines from 2-5 from fruits file.
+ans: sed -n '2,5p' fruits.txt
+8)Count Number of Characters, words of Fruits file.
+ans:  wc -c fruits.txt
+wc -w fruits.txt
+9)Creating a hard / soft link for files
+ans: 
+10)Display 2 - 7 character from fruit file.
+ans: cut -c 2-7 fruits.txt
+11)Display searched line and n line before and after the result.
+ans: grep -A n -B n "Apple" fruits.txt
+12)Display the process status
+ans: ps aux
+13)Check a string from multiple files and store the result in output file.
+ans:
+
+
