@@ -1,0 +1,442 @@
+SQL> select count(mgr) from emp2;
+
+COUNT(MGR)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+        14                                                                                                                                                                                              
+
+SQL> select count(*) from emp2;
+
+  COUNT(*)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+        15                                                                                                                                                                                              
+
+SQL> select count(distinct mgr) from emp2;
+
+COUNT(DISTINCTMGR)                                                                                                                                                                                      
+------------------                                                                                                                                                                                      
+                 7                                                                                                                                                                                      
+
+SQL> SELECT SUM(SAL) FROM EMP2;
+
+  SUM(SAL)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+     30275                                                                                                                                                                                              
+
+SQL> SELECT AVG(SAL) FROM EMP2;
+
+  AVG(SAL)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+2018.33333                                                                                                                                                                                              
+
+SQL> SELECT MAX(SAL) FROM EMP2;
+
+  MAX(SAL)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+      5000                                                                                                                                                                                              
+
+SQL> SELECT MIN(SAL) FROM EMP2;
+
+  MIN(SAL)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+       800                                                                                                                                                                                              
+
+SQL> SELECT SYSDATE FROM DUAL;
+
+SYSDATE                                                                                                                                                                                                 
+---------                                                                                                                                                                                               
+15-JAN-25                                                                                                                                                                                               
+
+SQL> SELECT ADD_MONTHS(HIREDATE,4) FROM EMP2 WHERE EMPNO=7369;
+
+ADD_MONTH                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+17-APR-81                                                                                                                                                                                               
+
+SQL> SELECT LAST_DAY(SYSDATE) FROM DUAL;
+
+LAST_DAY(                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+31-JAN-25                                                                                                                                                                                               
+
+SQL> SELECT MONTHS_BETWEEN(SYSDATE,'23-JAN-25') FROM DUAL;
+
+MONTHS_BETWEEN(SYSDATE,'23-JAN-25')                                                                                                                                                                     
+-----------------------------------                                                                                                                                                                     
+                         -.23803801                                                                                                                                                                     
+
+SQL> SELECT MONTHS_BETWEEN('23-JAN-25',SYSDATE) FROM DUAL;
+
+MONTHS_BETWEEN('23-JAN-25',SYSDATE)                                                                                                                                                                     
+-----------------------------------                                                                                                                                                                     
+                         .238017846                                                                                                                                                                     
+
+SQL> SEECT NEXT_DAY(SYSDATE,'MONDAY') FROM DUAL;
+SP2-0734: unknown command beginning "SEECT NEXT..." - rest of line ignored.
+SQL> SELECT NEXT_DAY(SYSDATE,'MONDAY') FROM DUAL;
+
+NEXT_DAY(                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+20-JAN-25                                                                                                                                                                                               
+
+SQL> SELECT EXTRACT (MONTH FROM SYSDATE) FROM DUAL;
+
+EXTRACT(MONTHFROMSYSDATE)                                                                                                                                                                               
+-------------------------                                                                                                                                                                               
+                        1                                                                                                                                                                               
+
+SQL> SELECT EXTRACT (YEAR FROM SYSDATE) FROM DUAL;
+
+EXTRACT(YEARFROMSYSDATE)                                                                                                                                                                                
+------------------------                                                                                                                                                                                
+                    2025                                                                                                                                                                                
+
+SQL> SELECT ABS(5),ABS(-100) FROM DUAL;
+
+    ABS(5)  ABS(-100)                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+         5        100                                                                                                                                                                                   
+
+SQL> SELECT CEIL(-5.2),CEIL(5.7) FROM DUAL;
+
+CEIL(-5.2)  CEIL(5.7)                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+        -5          6                                                                                                                                                                                   
+
+SQL> SELECT FLOOR(-5.2),FLOOR(5.7) FROM DUAL;
+
+FLOOR(-5.2) FLOOR(5.7)                                                                                                                                                                                  
+----------- ----------                                                                                                                                                                                  
+         -6          5                                                                                                                                                                                  
+
+SQL> SELECT EXP(5) FROM DUAL;
+
+    EXP(5)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+148.413159                                                                                                                                                                                              
+
+SQL> SELECT LN(2) FROM DUAL;
+
+     LN(2)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+.693147181                                                                                                                                                                                              
+
+SQL> SELECT LOG(4,10) FROM DUAL;
+
+ LOG(4,10)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+1.66096405                                                                                                                                                                                              
+
+SQL> SELECT MOD(15,4) FROM DUAL;
+
+ MOD(15,4)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+         3                                                                                                                                                                                              
+
+SQL> SELECT POWER(4,3) FROM DUAL;
+
+POWER(4,3)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+        64                                                                                                                                                                                              
+
+SQL> SELECT SQRT(25) FROM DUAL;
+
+  SQRT(25)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+         5                                                                                                                                                                                              
+
+SQL> SELECT SQRT(-25) FROM DUAL;
+SELECT SQRT(-25) FROM DUAL
+            *
+ERROR at line 1:
+ORA-01428: argument '-25' is out of range 
+
+
+SQL> SELECT ROUND(15.19,1) ,ROUND()15.19 FROM DUAL;
+SELECT ROUND(15.19,1) ,ROUND()15.19 FROM DUAL
+                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT ROUND(15.19,1) ,ROUND(15.19) FROM DUAL;
+
+ROUND(15.19,1) ROUND(15.19)                                                                                                                                                                             
+-------------- ------------                                                                                                                                                                             
+          15.2           15                                                                                                                                                                             
+
+SQL> SELECT TRUNC(15.19,1) FROM DUAL;
+
+TRUNC(15.19,1)                                                                                                                                                                                          
+--------------                                                                                                                                                                                          
+          15.1                                                                                                                                                                                          
+
+SQL> SELECT SIGN(-8.5) FROM DUAL;
+
+SIGN(-8.5)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+        -1                                                                                                                                                                                              
+
+SQL> SELECT SIN(60),SIN(1.047167) FROM DUAL;
+
+   SIN(60) SIN(1.047167)                                                                                                                                                                                
+---------- -------------                                                                                                                                                                                
+-.30481062    .866010128                                                                                                                                                                                
+
+SQL> SELECT CHR(70) FROM DUAL;
+
+C                                                                                                                                                                                                       
+-                                                                                                                                                                                                       
+F                                                                                                                                                                                                       
+
+SQL> SELECT CONCAT('ABHIK','PATRA'), 'ABHIK'||'PATRA' FROM DUAL;
+
+CONCAT('AB 'ABHIK'||'                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+ABHIKPATRA ABHIKPATRA                                                                                                                                                                                   
+
+SQL> SELECT LPAD ('ORACLE'10,'*') FROM DUAL;
+SELECT LPAD ('ORACLE'10,'*') FROM DUAL
+                     *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> SELECT LPAD ('ORACLE',10,'*') FROM DUAL;
+
+LPAD('ORAC                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+****ORACLE                                                                                                                                                                                              
+
+SQL> SELECT RPAD ('ORACLE',10,'*') FROM DUAL;
+
+RPAD('ORAC                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+ORACLE****                                                                                                                                                                                              
+
+SQL> SELECT INITCAP ('HELLO') FROM DUAL;
+
+INITC                                                                                                                                                                                                   
+-----                                                                                                                                                                                                   
+Hello                                                                                                                                                                                                   
+
+SQL> SELECT LOWER ('HELLO') FROM DUAL;
+
+LOWER                                                                                                                                                                                                   
+-----                                                                                                                                                                                                   
+hello                                                                                                                                                                                                   
+
+SQL> SELECT UPPER ('heLLo') FROM DUAL;
+
+UPPER                                                                                                                                                                                                   
+-----                                                                                                                                                                                                   
+HELLO                                                                                                                                                                                                   
+
+SQL> SELECT REPLACE('ORACALE','RAV','V') FROM DUAL;
+
+REPLACE                                                                                                                                                                                                 
+-------                                                                                                                                                                                                 
+ORACALE                                                                                                                                                                                                 
+
+SQL> SELECT SUBSTR('ORACALE',3,2) FROM DUAL;
+
+SU                                                                                                                                                                                                      
+--                                                                                                                                                                                                      
+AC                                                                                                                                                                                                      
+
+SQL> SELECT LENGTH('ABHIK') FROM DUAL;
+
+LENGTH('ABHIK')                                                                                                                                                                                         
+---------------                                                                                                                                                                                         
+              5                                                                                                                                                                                         
+
+SQL> SELECT ENAME FROM EMP2 FROM EMP WHERE SOUNDEX(ENAME)=SOUNDEX('KEEING');
+SELECT ENAME FROM EMP2 FROM EMP WHERE SOUNDEX(ENAME)=SOUNDEX('KEEING')
+                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT ENAME FROM EMP2  WHERE SOUNDEX(ENAME)=SOUNDEX('KEEING');
+
+ENAME                                                                                                                                                                                                   
+----------                                                                                                                                                                                              
+KING                                                                                                                                                                                                    
+
+SQL> SELECT SUM(SAL) FROM EMP;
+SELECT SUM(SAL) FROM EMP
+                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT SUM(SAL) FROM EMP2;
+
+  SUM(SAL)                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+     30275                                                                                                                                                                                              
+
+SQL> SELECT SUM(TO_NUMBER(SAL)) FROM EMP2;
+
+SUM(TO_NUMBER(SAL))                                                                                                                                                                                     
+-------------------                                                                                                                                                                                     
+              30275                                                                                                                                                                                     
+
+SQL> SELECT TO_DATE('January 7,1988',month dd,yyyy') FROM DUAL;
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> SELECT TO_DATE('January 7,1988','month dd,yyyy') FROM DUAL;
+
+TO_DATE('                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+07-JAN-88                                                                                                                                                                                               
+
+SQL> SELECT TO_CHAR(17145,'$999,999') FROM DUAL;
+
+TO_CHAR(1                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+  $17,145                                                                                                                                                                                               
+
+SQL> SELECT TO_CHAR(17145,'$000,000') FROM DUAL;
+
+TO_CHAR(1                                                                                                                                                                                               
+---------                                                                                                                                                                                               
+ $017,145                                                                                                                                                                                               
+
+SQL> SELECT TO_CHAR(HIREDATE,'MONTH DD,YYYY') FROM EMP2 WHERE EMPNO=7566;
+
+TO_CHAR(HIREDATE,'MONTHDD,YYYY')                                                                                                                                                                        
+--------------------------------------------                                                                                                                                                            
+APRIL     02,1981                                                                                                                                                                                       
+
+SQL> SELECT HIREDATE, TO_CHAR(HIREDATE,'DDTH-MON-YY') FROM EMP2 WHERE DEPTNO=7566;
+
+no rows selected
+
+SQL> SELECT HIREDATE, TO_CHAR(HIREDATE,'DDTH-MON-YY') FROM EMP2 WHERE DEPTNO=10;
+
+HIREDATE  TO_CHAR(HIREDATE,'DD                                                                                                                                                                          
+--------- --------------------                                                                                                                                                                          
+09-JUN-81 09TH-JUN-81                                                                                                                                                                                   
+17-NOV-81 17TH-NOV-81                                                                                                                                                                                   
+23-JAN-82 23RD-JAN-82                                                                                                                                                                                   
+
+SQL> SELECT TO_CHAR(HIREDATE,'DDSP-MON-YY') FROM EMP2 WHERE DEPTNO=10;
+
+TO_CHAR(HIREDATE,'DDSP-MON-Y                                                                                                                                                                            
+----------------------------                                                                                                                                                                            
+NINE-JUN-81                                                                                                                                                                                             
+SEVENTEEN-NOV-81                                                                                                                                                                                        
+TWENTY-THREE-JAN-82                                                                                                                                                                                     
+
+SQL> SELECT TO_CHAR(HIREDATE,'DDSPTH-MON-YY') FROM EMP2 WHERE DEPTNO=10;
+
+TO_CHAR(HIREDATE,'DDSPTH-MON-Y                                                                                                                                                                          
+------------------------------                                                                                                                                                                          
+NINTH-JUN-81                                                                                                                                                                                            
+SEVENTEENTH-NOV-81                                                                                                                                                                                      
+TWENTY-THIRD-JAN-82                                                                                                                                                                                     
+
+SQL> SELECT ENAME,NVL (COMMISSION,0) COMMISSIONFROM EMP;
+SELECT ENAME,NVL (COMMISSION,0) COMMISSIONFROM EMP
+                                               *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT ENAME,NVL(COMMISSION,0) COMMISSION FROM EMP;
+SELECT ENAME,NVL(COMMISSION,0) COMMISSION FROM EMP
+                                               *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT ENAME,NVL(COMM,0) COMM FROM EMP;
+SELECT ENAME,NVL(COMM,0) COMM FROM EMP
+                                   *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT ENAME,NVL(COMM,0) COMM FROM EMP2;
+
+ENAME            COMM                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+WARD              500                                                                                                                                                                                   
+JONES               0                                                                                                                                                                                   
+MARTIN           1400                                                                                                                                                                                   
+MARTIN            400                                                                                                                                                                                   
+BLAKE               0                                                                                                                                                                                   
+CLARK               0                                                                                                                                                                                   
+SCOTT               0                                                                                                                                                                                   
+KING                0                                                                                                                                                                                   
+TURNER              0                                                                                                                                                                                   
+ADAMAS              0                                                                                                                                                                                   
+JAMES               0                                                                                                                                                                                   
+FORD                0                                                                                                                                                                                   
+MILLER              0                                                                                                                                                                                   
+SMITH               0                                                                                                                                                                                   
+ALLEN             300                                                                                                                                                                                   
+
+15 rows selected.
+
+SQL> SELECT ENAME,SAL+NVL(COMM,0) TOTAL SAL FROM EMP2;
+SELECT ENAME,SAL+NVL(COMM,0) TOTAL SAL FROM EMP2
+                                   *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT ENAME,NVL2(COMM,'YES','NO') FROM EMP2;
+
+ENAME      NVL                                                                                                                                                                                          
+---------- ---                                                                                                                                                                                          
+WARD       YES                                                                                                                                                                                          
+JONES      NO                                                                                                                                                                                           
+MARTIN     YES                                                                                                                                                                                          
+MARTIN     YES                                                                                                                                                                                          
+BLAKE      NO                                                                                                                                                                                           
+CLARK      NO                                                                                                                                                                                           
+SCOTT      NO                                                                                                                                                                                           
+KING       NO                                                                                                                                                                                           
+TURNER     YES                                                                                                                                                                                          
+ADAMAS     NO                                                                                                                                                                                           
+JAMES      NO                                                                                                                                                                                           
+FORD       NO                                                                                                                                                                                           
+MILLER     NO                                                                                                                                                                                           
+SMITH      NO                                                                                                                                                                                           
+ALLEN      YES                                                                                                                                                                                          
+
+15 rows selected.
+
+SQL> SELECT ENAME,SAL+NVL (COMM,0) TOTAL SAL FROM EMP2;
+SELECT ENAME,SAL+NVL (COMM,0) TOTAL SAL FROM EMP2
+                                    *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT ENAME,SAL+NVL (COMM,0) TOTALSAL FROM EMP2;
+
+ENAME        TOTALSAL                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+WARD             1750                                                                                                                                                                                   
+JONES            2975                                                                                                                                                                                   
+MARTIN           2650                                                                                                                                                                                   
+MARTIN           1650                                                                                                                                                                                   
+BLAKE            2850                                                                                                                                                                                   
+CLARK            2450                                                                                                                                                                                   
+SCOTT            3000                                                                                                                                                                                   
+KING             5000                                                                                                                                                                                   
+TURNER           1500                                                                                                                                                                                   
+ADAMAS           1100                                                                                                                                                                                   
+JAMES             950                                                                                                                                                                                   
+FORD             3000                                                                                                                                                                                   
+MILLER           1300                                                                                                                                                                                   
+SMITH             800                                                                                                                                                                                   
+ALLEN            1900                                                                                                                                                                                   
+
+15 rows selected.
+
+SQL> SPOOL OFF
