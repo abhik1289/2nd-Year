@@ -1,7 +1,8 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 import java.util.Scanner;
-class Main {
+
+class Q2 {
     public static void main(String[] args) {
         
          int evenCount = 0, oddCount = 0;
@@ -20,7 +21,7 @@ class Main {
         System.out.println("Total Even Numbers: " + evenCount);
         System.out.println("Total Odd Numbers: " + oddCount);
 
-        
+      
         
         
         
