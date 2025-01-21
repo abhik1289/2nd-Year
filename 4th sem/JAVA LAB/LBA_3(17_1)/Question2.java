@@ -1,33 +1,42 @@
 import java.util.Scanner;
-class Reacangle {
+
+class Rectangle {
 	private double breadth;
 	private double length;
-	
-	void read(){
-		System.out.println("Length is: "+length);
-		System.out.println("Breadth is: "+ breadth);
-		
+
+	Rectangle(double breadth, double length) {
+		this.breadth = breadth;
+		this.length = length;
 	}
-	void calculate(){
-		double ans = breadth*length;
-		System.out.println("Area is",ans);
+
+	void read() {
+		System.out.println("Length is: " + length);
+		System.out.println("Breadth is: " + breadth);
+
 	}
-	void display(){
+
+	void calculate() {
+		double ans = breadth * length;
+		System.out.println("Area is: " + ans);
+	}
+
+	void display() {
 		read();
 		calculate();
 	}
-	
+
 }
 
 public class Question2 {
 
-
-    public static void main(String[] args){
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Length is: ");
 		double length = sc.nextDouble();
 		System.out.println("Breadth is: ");
-		double length = sc.nextDouble();
+		double breadth = sc.nextDouble();
+		Rectangle r1 = new Rectangle(breadth,length);
+		r1.display();
 	}
-    
+
 }
