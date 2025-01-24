@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 class Sheet {
     double length, width;
@@ -40,10 +41,20 @@ class Box extends Sheet {
 class Question1 {
 
     public static void main(String[] args) {
-        Sheet s1 = new Sheet(12, 10);
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the width: ");
+        double width = sc.nextDouble();
+        System.out.println("Enter the Length: ");
+        double length = sc.nextDouble();
+        System.out.println("Enter the Height: ");
+        double height = sc.nextDouble();
+
+        Sheet s1 = new Sheet(length, width);
         System.out.println("Area is: " + s1.area());
         System.out.println("Price is: " + s1.price());
-        Box b1 = new Box(5, 4.2, 7);
+        Box b1 = new Box(length, width, height);
         System.out.println("Area is: " + b1.volume());
         System.out.println("Price is: " + b1.price());
     }
