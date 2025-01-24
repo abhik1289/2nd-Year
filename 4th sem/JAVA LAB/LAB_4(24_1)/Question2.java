@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 class Plate {
     double length, width;
@@ -44,12 +45,20 @@ class WoodBox extends Box {
 
 public class Question2 {
     public static void main(String[] args) {
-
-        Plate p1 = new Plate(3, 3);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the width: ");
+        double width = sc.nextDouble();
+        System.out.println("Enter the Length: ");
+        double length = sc.nextDouble();
+        System.out.println("Enter the Height: ");
+        double height = sc.nextDouble();
+        System.out.println("Enter the Thick: ");
+        double thick = sc.nextDouble();
+        Plate p1 = new Plate(length, width);
         System.out.println("Dimension of plate: " + p1.dimension());
-        Box b1 = new Box(3, 3, 2);
+        Box b1 = new Box(length, width, height);
         System.out.println("Dimension of box: " + b1.dimension());
-        Plate wb1 = new WoodBox(3, 3, 2, 4);
+        Plate wb1 = new WoodBox(length, width, height, thick);
         System.out.println("Dimension of WoodBox: " + wb1.dimension());
 
     }
