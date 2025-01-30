@@ -24,7 +24,5 @@ public class Question4 {
         System.out.println("Subtracting three integers: " + calc.subtract(20, 5, 3));
        
 
-        int[] values = { 2, 3, 4 };
-        System.out.println("Subtracting an array from a base value: " + calc.subtract(20, values));
     }
 }
