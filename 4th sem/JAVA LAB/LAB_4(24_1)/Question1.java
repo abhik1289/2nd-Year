@@ -11,7 +11,7 @@ class Sheet {
     public double area() {
         return length * width;
     }
-
+ 
     public double price() {
         return area() * 40;
     }
@@ -31,8 +31,8 @@ class Box extends Sheet {
         return area() * height;
     }
 
-    // @Override
-    public double cost() {
+    @Override
+    public double price() {
         return volume() * 60;
     }
 

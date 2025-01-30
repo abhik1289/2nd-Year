@@ -1,0 +1,732 @@
+SQL> create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(fage>25 and fage <50) not null);
+create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(fage>25 and fage <50) not null)
+                                                                                                                                          *
+ERROR at line 1:
+ORA-01727: numeric precision specifier is out of range (1 to 38) 
+
+
+SQL> create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(fage>25 and fage <50) not null)
+  2  ;
+create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(fage>25 and fage <50) not null)
+                                                                                                                                          *
+ERROR at line 1:
+ORA-01727: numeric precision specifier is out of range (1 to 38) 
+
+
+SQL> create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(2) check(fage>25 and fage <50) not null);
+
+Table created.
+
+SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+AQ$DEF$_AQCALL                 VIEW                                             
+AQ$DEF$_AQERROR                VIEW                                             
+AQ$_DEF$_AQCALL_F              VIEW                                             
+AQ$_DEF$_AQERROR_F             VIEW                                             
+AQ$_INTERNET_AGENTS            TABLE                                            
+AQ$_INTERNET_AGENT_PRIVS       TABLE                                            
+AQ$_QUEUES                     TABLE                                            
+AQ$_QUEUE_TABLES               TABLE                                            
+AQ$_SCHEDULES                  TABLE                                            
+CATALOG                        SYNONYM                                          
+COL                            SYNONYM                                          
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+D10                            TABLE                                            
+D15                            TABLE                                            
+D20                            TABLE                                            
+DEF$_AQCALL                    TABLE                                            
+DEF$_AQERROR                   TABLE                                            
+DEF$_CALLDEST                  TABLE                                            
+DEF$_DEFAULTDEST               TABLE                                            
+DEF$_DESTINATION               TABLE                                            
+DEF$_ERROR                     TABLE                                            
+DEF$_LOB                       TABLE                                            
+DEF$_ORIGIN                    TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+DEF$_PROPAGATOR                TABLE                                            
+DEF$_PUSHED_TRANSACTIONS       TABLE                                            
+EMP2                           TABLE                                            
+FACULTY                        TABLE                                            
+HELP                           TABLE                                            
+LOGMNRC_DBNAME_UID_MAP         TABLE                                            
+LOGMNRC_GSBA                   TABLE                                            
+LOGMNRC_GSII                   TABLE                                            
+LOGMNRC_GTCS                   TABLE                                            
+LOGMNRC_GTLO                   TABLE                                            
+LOGMNRP_CTAS_PART_MAP          TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGMNRT_MDDL$                  TABLE                                            
+LOGMNR_AGE_SPILL$              TABLE                                            
+LOGMNR_ATTRCOL$                TABLE                                            
+LOGMNR_ATTRIBUTE$              TABLE                                            
+LOGMNR_CCOL$                   TABLE                                            
+LOGMNR_CDEF$                   TABLE                                            
+LOGMNR_COL$                    TABLE                                            
+LOGMNR_COLTYPE$                TABLE                                            
+LOGMNR_DICTIONARY$             TABLE                                            
+LOGMNR_DICTSTATE$              TABLE                                            
+LOGMNR_ENC$                    TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGMNR_ERROR$                  TABLE                                            
+LOGMNR_FILTER$                 TABLE                                            
+LOGMNR_GLOBAL$                 TABLE                                            
+LOGMNR_GT_TAB_INCLUDE$         TABLE                                            
+LOGMNR_GT_USER_INCLUDE$        TABLE                                            
+LOGMNR_GT_XID_INCLUDE$         TABLE                                            
+LOGMNR_ICOL$                   TABLE                                            
+LOGMNR_IND$                    TABLE                                            
+LOGMNR_INDCOMPART$             TABLE                                            
+LOGMNR_INDPART$                TABLE                                            
+LOGMNR_INDSUBPART$             TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGMNR_INTEGRATED_SPILL$       TABLE                                            
+LOGMNR_KOPM$                   TABLE                                            
+LOGMNR_LOB$                    TABLE                                            
+LOGMNR_LOBFRAG$                TABLE                                            
+LOGMNR_LOG$                    TABLE                                            
+LOGMNR_LOGMNR_BUILDLOG         TABLE                                            
+LOGMNR_NTAB$                   TABLE                                            
+LOGMNR_OBJ$                    TABLE                                            
+LOGMNR_OPQTYPE$                TABLE                                            
+LOGMNR_PARAMETER$              TABLE                                            
+LOGMNR_PARTOBJ$                TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGMNR_PROCESSED_LOG$          TABLE                                            
+LOGMNR_PROPS$                  TABLE                                            
+LOGMNR_REFCON$                 TABLE                                            
+LOGMNR_RESTART_CKPT$           TABLE                                            
+LOGMNR_RESTART_CKPT_TXINFO$    TABLE                                            
+LOGMNR_SEED$                   TABLE                                            
+LOGMNR_SESSION$                TABLE                                            
+LOGMNR_SESSION_ACTIONS$        TABLE                                            
+LOGMNR_SESSION_EVOLVE$         TABLE                                            
+LOGMNR_SPILL$                  TABLE                                            
+LOGMNR_SUBCOLTYPE$             TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGMNR_TAB$                    TABLE                                            
+LOGMNR_TABCOMPART$             TABLE                                            
+LOGMNR_TABPART$                TABLE                                            
+LOGMNR_TABSUBPART$             TABLE                                            
+LOGMNR_TS$                     TABLE                                            
+LOGMNR_TYPE$                   TABLE                                            
+LOGMNR_UID$                    TABLE                                            
+LOGMNR_USER$                   TABLE                                            
+LOGSTDBY$APPLY_MILESTONE       TABLE                                            
+LOGSTDBY$APPLY_PROGRESS        TABLE                                            
+LOGSTDBY$EDS_TABLES            TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+LOGSTDBY$EVENTS                TABLE                                            
+LOGSTDBY$FLASHBACK_SCN         TABLE                                            
+LOGSTDBY$HISTORY               TABLE                                            
+LOGSTDBY$PARAMETERS            TABLE                                            
+LOGSTDBY$PLSQL                 TABLE                                            
+LOGSTDBY$SCN                   TABLE                                            
+LOGSTDBY$SKIP                  TABLE                                            
+LOGSTDBY$SKIP_SUPPORT          TABLE                                            
+LOGSTDBY$SKIP_TRANSACTION      TABLE                                            
+MVIEW$_ADV_AJG                 TABLE                                            
+MVIEW$_ADV_BASETABLE           TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+MVIEW$_ADV_CLIQUE              TABLE                                            
+MVIEW$_ADV_ELIGIBLE            TABLE                                            
+MVIEW$_ADV_EXCEPTIONS          TABLE                                            
+MVIEW$_ADV_FILTER              TABLE                                            
+MVIEW$_ADV_FILTERINSTANCE      TABLE                                            
+MVIEW$_ADV_FJG                 TABLE                                            
+MVIEW$_ADV_GC                  TABLE                                            
+MVIEW$_ADV_INFO                TABLE                                            
+MVIEW$_ADV_JOURNAL             TABLE                                            
+MVIEW$_ADV_LEVEL               TABLE                                            
+MVIEW$_ADV_LOG                 TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+MVIEW$_ADV_OUTPUT              TABLE                                            
+MVIEW$_ADV_PARAMETERS          TABLE                                            
+MVIEW$_ADV_PLAN                TABLE                                            
+MVIEW$_ADV_PRETTY              TABLE                                            
+MVIEW$_ADV_ROLLUP              TABLE                                            
+MVIEW$_ADV_SQLDEPEND           TABLE                                            
+MVIEW$_ADV_TEMP                TABLE                                            
+MVIEW$_ADV_WORKLOAD            TABLE                                            
+MVIEW_EVALUATIONS              VIEW                                             
+MVIEW_EXCEPTIONS               VIEW                                             
+MVIEW_FILTER                   VIEW                                             
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+MVIEW_FILTERINSTANCE           VIEW                                             
+MVIEW_LOG                      VIEW                                             
+MVIEW_RECOMMENDATIONS          VIEW                                             
+MVIEW_WORKLOAD                 VIEW                                             
+OL$                            TABLE                                            
+OL$HINTS                       TABLE                                            
+OL$NODES                       TABLE                                            
+PRODUCT_PRIVS                  VIEW                                             
+PRODUCT_USER_PROFILE           SYNONYM                                          
+PUBLICSYN                      SYNONYM                                          
+REPCAT$_AUDIT_ATTRIBUTE        TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+REPCAT$_AUDIT_COLUMN           TABLE                                            
+REPCAT$_COLUMN_GROUP           TABLE                                            
+REPCAT$_CONFLICT               TABLE                                            
+REPCAT$_DDL                    TABLE                                            
+REPCAT$_EXCEPTIONS             TABLE                                            
+REPCAT$_EXTENSION              TABLE                                            
+REPCAT$_FLAVORS                TABLE                                            
+REPCAT$_FLAVOR_OBJECTS         TABLE                                            
+REPCAT$_GENERATED              TABLE                                            
+REPCAT$_GROUPED_COLUMN         TABLE                                            
+REPCAT$_INSTANTIATION_DDL      TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+REPCAT$_KEY_COLUMNS            TABLE                                            
+REPCAT$_OBJECT_PARMS           TABLE                                            
+REPCAT$_OBJECT_TYPES           TABLE                                            
+REPCAT$_PARAMETER_COLUMN       TABLE                                            
+REPCAT$_PRIORITY               TABLE                                            
+REPCAT$_PRIORITY_GROUP         TABLE                                            
+REPCAT$_REFRESH_TEMPLATES      TABLE                                            
+REPCAT$_REPCAT                 TABLE                                            
+REPCAT$_REPCATLOG              TABLE                                            
+REPCAT$_REPCOLUMN              TABLE                                            
+REPCAT$_REPGROUP_PRIVS         TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+REPCAT$_REPOBJECT              TABLE                                            
+REPCAT$_REPPROP                TABLE                                            
+REPCAT$_REPSCHEMA              TABLE                                            
+REPCAT$_RESOLUTION             TABLE                                            
+REPCAT$_RESOLUTION_METHOD      TABLE                                            
+REPCAT$_RESOLUTION_STATISTICS  TABLE                                            
+REPCAT$_RESOL_STATS_CONTROL    TABLE                                            
+REPCAT$_RUNTIME_PARMS          TABLE                                            
+REPCAT$_SITES_NEW              TABLE                                            
+REPCAT$_SITE_OBJECTS           TABLE                                            
+REPCAT$_SNAPGROUP              TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+REPCAT$_TEMPLATE_OBJECTS       TABLE                                            
+REPCAT$_TEMPLATE_PARMS         TABLE                                            
+REPCAT$_TEMPLATE_REFGROUPS     TABLE                                            
+REPCAT$_TEMPLATE_SITES         TABLE                                            
+REPCAT$_TEMPLATE_STATUS        TABLE                                            
+REPCAT$_TEMPLATE_TARGETS       TABLE                                            
+REPCAT$_TEMPLATE_TYPES         TABLE                                            
+REPCAT$_USER_AUTHORIZATIONS    TABLE                                            
+REPCAT$_USER_PARM_VALUES       TABLE                                            
+SQLPLUS_PRODUCT_PROFILE        TABLE                                            
+STDUDENT_5588                  TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+STD_5588                       TABLE                                            
+STUDENT_WITHYOURROLLNO         TABLE                                            
+SYSCATALOG                     SYNONYM                                          
+SYSFILES                       SYNONYM                                          
+TAB                            SYNONYM                                          
+TABQUOTAS                      SYNONYM                                          
+
+182 rows selected.
+
+SQL>  alter table faculty add constraint fk foreign key(faculty_id) references Student_WithYourRollNo(srollno);
+
+Table altered.
+
+SQL> alter table faculty add constraint fk1 foreign key(rollno) references Student_WithYourRollNo(srollno);
+
+Table altered.
+
+SQL> rename Student_WithYourRollNo to Student_235588;
+
+Table renamed.
+
+SQL> insert into Student_2305842 values(842,10,'GGWP','PATNA',15,2301);
+insert into Student_2305842 values(842,10,'GGWP','PATNA',15,2301)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into Student_2305588 values(842,10,'GGWP','PATNA',15,2301);
+insert into Student_2305588 values(842,10,'GGWP','PATNA',15,2301)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> selec * from Student_235588;
+SP2-0734: unknown command beginning "selec * fr..." - rest of line ignored.
+SQL> select * from Student_235588;
+
+no rows selected
+
+SQL> rename Student_235588 to Student_2305588;
+
+Table renamed.
+
+SQL> insert into Student_2305588 values(842,10,'GGWP','PATNA',15,2301);
+
+1 row created.
+
+SQL> insert into Student_2305588 values(872,20,'GGRP','PATIA',19,2302);
+
+1 row created.
+
+SQL> insert into Student_2305588 values(912,30,'AKYR','AGRA',21,2303);
+
+1 row created.
+
+SQL> insert into Student_2305588 values(1012,40,'RMWP','OSLO',12,2306);
+
+1 row created.
+
+SQL> insert into Student_2305588 values(1013,50,'DODO','KOLKATA',10,2305);
+
+1 row created.
+
+SQL> insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',10,2305);
+insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',10,2305)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',10,2305);
+insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',10,2305)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into Student_2305588 values(1013,50,'DOGI','KOLKATA',10,2305);
+insert into Student_2305588 values(1013,50,'DOGI','KOLKATA',10,2305)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007055) violated 
+
+
+SQL> insert into Student_2305588 values(1014,60,NULL,'KOLKATA',NULL,2309);
+insert into Student_2305588 values(1014,60,NULL,'KOLKATA',NULL,2309)
+                                           *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYSTEM"."STUDENT_2305588"."SNAME") 
+
+
+SQL> insert into Student_2305588 values(1014,60,NULL,NULL,NULL,2309);
+insert into Student_2305588 values(1014,60,NULL,NULL,NULL,2309)
+                                           *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYSTEM"."STUDENT_2305588"."SNAME") 
+
+
+SQL> insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',30,2305);
+insert into Student_2305842 values(1013,50,'DOGI','KOLKATA',30,2305)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into Student_2305842 values(1013,50,'DODO','KOLKATA',10,2305);
+insert into Student_2305842 values(1013,50,'DODO','KOLKATA',10,2305)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL>  insert into Student_2305842 values(1013,60,'DOGI','AMRITSAR',15,2311);
+ insert into Student_2305842 values(1013,60,'DOGI','AMRITSAR',15,2311)
+             *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into Student_2305842 values(1013,60,'DOGI','AMRITSAR',15,2311);
+insert into Student_2305842 values(1013,60,'DOGI','AMRITSAR',15,2311)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from Student_2305588 where age >20;
+select * from Student_2305588 where age >20
+                                    *
+ERROR at line 1:
+ORA-00904: "AGE": invalid identifier 
+
+
+SQL> select * from Student_2305588 where fage>20;
+select * from Student_2305588 where fage>20
+                                    *
+ERROR at line 1:
+ORA-00904: "FAGE": invalid identifier 
+
+
+SQL> select * from Student_2305588
+  2  ;
+
+   SROLLNO FACULTY_ID SNAME      SADRESS          SAGE      REGNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+       842         10 GGWP       PATNA              15       2301               
+       872         20 GGRP       PATIA              19       2302               
+       912         30 AKYR       AGRA               21       2303               
+      1012         40 RMWP       OSLO               12       2306               
+      1013         50 DODO       KOLKATA            10       2305               
+
+SQL> select * from Student_2305588 where sage>20;
+
+   SROLLNO FACULTY_ID SNAME      SADRESS          SAGE      REGNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+       912         30 AKYR       AGRA               21       2303               
+
+SQL> select * from Student_2305588 order by srollno asc;
+
+   SROLLNO FACULTY_ID SNAME      SADRESS          SAGE      REGNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+       842         10 GGWP       PATNA              15       2301               
+       872         20 GGRP       PATIA              19       2302               
+       912         30 AKYR       AGRA               21       2303               
+      1012         40 RMWP       OSLO               12       2306               
+      1013         50 DODO       KOLKATA            10       2305               
+
+SQL> select * from Student_2305588 order by sname desc;
+
+   SROLLNO FACULTY_ID SNAME      SADRESS          SAGE      REGNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+      1012         40 RMWP       OSLO               12       2306               
+       842         10 GGWP       PATNA              15       2301               
+       872         20 GGRP       PATIA              19       2302               
+      1013         50 DODO       KOLKATA            10       2305               
+       912         30 AKYR       AGRA               21       2303               
+
+SQL> select * from faculty;
+
+no rows selected
+
+SQL> insert into faculty (101,842,"Virat","Delhi",30);
+insert into faculty (101,842,"Virat","Delhi",30)
+                     *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> insert into faculty values (101,842,"Virat","Delhi",30);
+insert into faculty values (101,842,"Virat","Delhi",30)
+                                            *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values(101,842,"Virat","Delhi",30);
+insert into faculty values(101,842,"Virat","Delhi",30)
+                                           *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> desc faculty;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FACULTY_ID                                NOT NULL NUMBER(5)
+ ROLLNO                                             NUMBER(5)
+ FNAME                                     NOT NULL CHAR(10)
+ FADRESS                                   NOT NULL VARCHAR2(10)
+ FAGE                                      NOT NULL NUMBER(2)
+
+SQL> insert into faculty values (10,842,"Virat","Delhi",30);
+insert into faculty values (10,842,"Virat","Delhi",30)
+                                           *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values (10,8429,"Virat","Delhi",30);
+insert into faculty values (10,8429,"Virat","Delhi",30)
+                                            *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values (50,1013,"Virat","Delhi",30);
+insert into faculty values (50,1013,"Virat","Delhi",30)
+                                            *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values (1013,50,"Virat","Delhi",30);
+insert into faculty values (1013,50,"Virat","Delhi",30)
+                                            *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values (30,912,"AKYR","AGRA",30);
+insert into faculty values (30,912,"AKYR","AGRA",30)
+                                          *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into faculty values (30,912,'AKYR','AGRA',30);
+insert into faculty values (30,912,'AKYR','AGRA',30)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.FK) violated - parent key not found 
+
+
+SQL> insert into faculty values (40,1012,'AKYR','AGRA',30);
+insert into faculty values (40,1012,'AKYR','AGRA',30)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.FK) violated - parent key not found 
+
+
+SQL> INSERT INTO faculty (faculty_id, rollno, fname, faddress, fage)
+  2  VALUES (10001, 101, 'John', 'Addr1', 30);
+INSERT INTO faculty (faculty_id, rollno, fname, faddress, fage)
+                                                *
+ERROR at line 1:
+ORA-00904: "FADDRESS": invalid identifier 
+
+
+SQL> insert into faculty values (10001, 101, 'John', 'Addr1', 30);
+insert into faculty values (10001, 101, 'John', 'Addr1', 30)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.FK1) violated - parent key not found 
+
+
+SQL> insert into Student_2305588 values (101, 10001, 'Ravi', 'Addr3', 20, 12345);
+
+1 row created.
+
+SQL> insert into faculty values (10001, 101, 'John', 'Addr1', 30);
+insert into faculty values (10001, 101, 'John', 'Addr1', 30)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.FK) violated - parent key not found 
+
+
+SQL> alter table faculty add constraint fk1 foreign key(rollno) references Student_2305588(srollno);
+alter table faculty add constraint fk1 foreign key(rollno) references Student_2305588(srollno)
+                                       *
+ERROR at line 1:
+ORA-02275: such a referential constraint already exists in the table 
+
+
+SQL> alter table faculty add constraint pk1 primary key(faculty_id);
+alter table faculty add constraint pk1 primary key(faculty_id)
+                                       *
+ERROR at line 1:
+ORA-02260: table can have only one primary key 
+
+
+SQL> drop table faculty;
+
+Table dropped.
+
+SQL> create table faculty(faculty_id number(5) primary key,rollno number(5), fname char(10) not null,fadress varchar2(10) not null,fage number(2) check(fage>25 and fage <50) not null);
+
+Table created.
+
+SQL> alter table faculty add constraint fk1 foreign key(rollno) references Student_2305588(srollno);
+
+Table altered.
+
+SQL> select * from Student_2305588;
+
+   SROLLNO FACULTY_ID SNAME      SADRESS          SAGE      REGNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+       842         10 GGWP       PATNA              15       2301               
+       872         20 GGRP       PATIA              19       2302               
+       912         30 AKYR       AGRA               21       2303               
+      1012         40 RMWP       OSLO               12       2306               
+      1013         50 DODO       KOLKATA            10       2305               
+       101      10001 Ravi       Addr3              20      12345               
+
+6 rows selected.
+
+SQL> insert into faculty values(10,842,'Virat','Delhi',30);
+
+1 row created.
+
+SQL> insert into faculty values(20,872,'Rohit','Mumbai',30);
+
+1 row created.
+
+SQL> insert into faculty values(30,912,'Sanju','Jaipur',30);
+
+1 row created.
+
+SQL> insert into faculty values(40,1012,'Mohit','Kolkata',35);
+
+1 row created.
+
+SQL> insert into faculty values(50,1013,'Lohit','Pune',32);
+
+1 row created.
+
+SQL> select * from faculty;
+
+FACULTY_ID     ROLLNO FNAME      FADRESS          FAGE                          
+---------- ---------- ---------- ---------- ----------                          
+        10        842 Virat      Delhi              30                          
+        20        872 Rohit      Mumbai             30                          
+        30        912 Sanju      Jaipur             30                          
+        40       1012 Mohit      Kolkata            35                          
+        50       1013 Lohit      Pune               32                          
+
+SQL> insert into faculty values(50,1013,'Lohit','Pune',32);
+insert into faculty values(50,1013,'Lohit','Pune',32)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007070) violated 
+
+
+SQL> insert into faculty values(50,1014,'Lohit','Pune',32);
+insert into faculty values(50,1014,'Lohit','Pune',32)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007070) violated 
+
+
+SQL> insert into faculty values(60,1014,'Lohit','Pune',32);
+insert into faculty values(60,1014,'Lohit','Pune',32)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.FK1) violated - parent key not found 
+
+
+SQL> alter table faculty add f_qualification char(5);
+
+Table altered.
+
+SQL> select * from faculty;
+
+FACULTY_ID     ROLLNO FNAME      FADRESS          FAGE F_QUA                    
+---------- ---------- ---------- ---------- ---------- -----                    
+        10        842 Virat      Delhi              30                          
+        20        872 Rohit      Mumbai             30                          
+        30        912 Sanju      Jaipur             30                          
+        40       1012 Mohit      Kolkata            35                          
+        50       1013 Lohit      Pune               32                          
+
+SQL> update faculty set f_qualification='None';
+
+5 rows updated.
+
+SQL> select * from faculty;
+
+FACULTY_ID     ROLLNO FNAME      FADRESS          FAGE F_QUA                    
+---------- ---------- ---------- ---------- ---------- -----                    
+        10        842 Virat      Delhi              30 None                     
+        20        872 Rohit      Mumbai             30 None                     
+        30        912 Sanju      Jaipur             30 None                     
+        40       1012 Mohit      Kolkata            35 None                     
+        50       1013 Lohit      Pune               32 None                     
+
+SQL> alter table faculty modify f_qualification char(5) not null;
+
+Table altered.
+
+SQL> alter table faculty add f_emailid varchar2(10);
+
+Table altered.
+
+SQL> update faculty set f_emailid = 'fm@kiit.ac.in';
+update faculty set f_emailid = 'fm@kiit.ac.in'
+                               *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."FACULTY"."F_EMAILID" (actual: 
+13, maximum: 10) 
+
+
+SQL> update faculty set f_emailid = 'kiit@.in';
+
+5 rows updated.
+
+SQL> select * from faculty;
+
+FACULTY_ID     ROLLNO FNAME      FADRESS          FAGE F_QUA F_EMAILID          
+---------- ---------- ---------- ---------- ---------- ----- ----------         
+        10        842 Virat      Delhi              30 None  kiit@.in           
+        20        872 Rohit      Mumbai             30 None  kiit@.in           
+        30        912 Sanju      Jaipur             30 None  kiit@.in           
+        40       1012 Mohit      Kolkata            35 None  kiit@.in           
+        50       1013 Lohit      Pune               32 None  kiit@.in           
+
+SQL> alter table faculty modify f_emailid not null;
+
+Table altered.
+
+SQL> alter table faculty modify f_emailid unique;
+alter table faculty modify f_emailid unique
+*
+ERROR at line 1:
+ORA-02299: cannot validate (SYSTEM.SYS_C007074) - duplicate keys found 
+
+
+SQL> truncate table faculty;
+
+Table truncated.
+
+SQL> select * from faculty;
+
+no rows selected
+
+SQL> alter table faculty modify f_emailid unique;
+
+Table altered.
+
+SQL> alter table faculty drop column fage;
+
+Table altered.
+
+SQL> selct * from faculty;
+SP2-0734: unknown command beginning "selct * fr..." - rest of line ignored.
+SQL> select * from faculty;
+
+no rows selected
+
+SQL> alter table faculty rename to kiit_faculty;
+
+Table altered.
+
+SQL> drop kiit_faculty;
+drop kiit_faculty
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option 
+
+
+SQL> drop table kiit_faculty;
+
+Table dropped.
+
+SQL> spool off;
