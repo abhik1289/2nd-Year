@@ -12,13 +12,7 @@ class Calculator {
     }
 
 
-    // Subtract an integer array from a base value
-    public int subtract(int base, int[] values) {
-        for (int value : values) {
-            base -= value;
-        }
-        return base;
-    }
+    
 }
 
 public class Question4 {
