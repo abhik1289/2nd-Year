@@ -13,6 +13,11 @@ public class Employee {
         this.basic = basic;
     }
 
+    public void details() {
+        System.out.println("Employee ID and Empployee Name " + empId + " " + ename);
+
+    }
+
     public double earnings() {
         return basic + (.8 * basic) + (.15 * basic);
     }
