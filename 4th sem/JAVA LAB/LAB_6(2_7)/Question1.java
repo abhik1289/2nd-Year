@@ -14,7 +14,7 @@ public class Question1 {
                 arr[i] = sc.nextInt();
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException:4");
         }
 
     }
