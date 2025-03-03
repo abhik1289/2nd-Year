@@ -6,7 +6,10 @@ interface Behaviar {
 
     public void h2();
 }
-
+// abstract Hello{
+    // public void h1();
+    // public void h2();
+// }
 class Activity implements Behaviar {
     static String college = "KIIT";
 
