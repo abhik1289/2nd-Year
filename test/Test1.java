@@ -1,24 +1,39 @@
 
 // This is a simple Java program.
 
-class Activity {
+interface Behaviar {
+    public void h1();
+
+    public void h2();
+}
+
+class Activity implements Behaviar {
     static String college = "KIIT";
+
+    public void h1() {
+        System.err.println("H1");
+    }
+
+    public void h2() {
+    }
 
     static int hello() {
         college = "Hello";
         System.out.println(college);
         return 1;
     }
-    protected void test(){
+
+    protected void test() {
         System.out.println("Test");
     }
 }
+
 class Act2 extends Activity {
 
-    protected void test(){
+    protected void test() {
         System.out.println("Test 2");
     }
-    
+
 }
 
 public class Test1 {
