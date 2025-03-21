@@ -1,0 +1,11 @@
+DECLARE
+    NUM NUMBER(5);
+BEGIN
+    NUM :=&NUM;
+    IF MOD(NUM, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('Even');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Odd');
+    END IF;
+END;
+/
