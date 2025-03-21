@@ -46,6 +46,5 @@ public class Question2 {
             System.out.println("Error reading from file: " + e.getMessage());
         }
 
-        scanner.close();
     }
 }
